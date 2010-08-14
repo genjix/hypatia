@@ -1,0 +1,20 @@
+#N canvas 1409 285 450 578 10;
+#X declare -lib mrpeach/udpreceive;
+#X declare -lib mrpeach/unpackOSC;
+#X declare -lib mrpeach/routeOSC;
+#X obj 95 21 import mrpeach/udpreceive;
+#X obj 95 63 import mrpeach/unpackOSC;
+#X obj 93 96 import mrpeach/routeOSC;
+#X obj 87 152 udpreceive 9002;
+#X obj 89 199 unpackOSC;
+#X obj 87 247 routeOSC /test;
+#X obj 92 291 routeOSC /v;
+#X obj 93 348 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2500 1;
+#X obj 179 349 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3100 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
